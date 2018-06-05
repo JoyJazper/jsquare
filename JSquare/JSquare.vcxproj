@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{BE226CDF-D89E-4047-99AE-E68C347E9CF2}</ProjectGuid>
+    <RootNamespace>JSquare</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)JSquare\ExternalRepos\GLEW\include\GL;$(SolutionDir)JSquare\ExternalRepos\GLFW\include\GLFW;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)JSquare\ExternalRepos\GLEW\lib;$(SolutionDir)JSquare\ExternalRepos\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)JSquare\ExternalRepos\GLEW\include\GL;$(SolutionDir)JSquare\ExternalRepos\GLFW\include\GLFW;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)JSquare\ExternalRepos\GLEW\lib;$(SolutionDir)JSquare\ExternalRepos\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glew32s.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32s.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Graphics\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExternalRepos\GLFW\docs\html\annotated.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\bug.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\build_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\build_guide.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\classes.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\compat_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\compat_guide.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\compile_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\compile_guide.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\context_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\context_guide.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\dir_1f12d41534b9d9c99a183e145b58d6f3.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\dir_351f617146de9499414a6c099ebbe0ca.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\dir_4bcf8e981abe5adb811ce4f57d70c9af.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\files.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\functions.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\functions_vars.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\glfw3native_8h.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\glfw3native_8h_source.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\glfw3_8h.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\glfw3_8h_source.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_b.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_c.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_d.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_b.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_c.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_d.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_e.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_f.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_g.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_h.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_i.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_j.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_k.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_l.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_m.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_n.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_o.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_p.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_r.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_s.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_t.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_defs_v.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_e.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_f.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_func.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_g.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_h.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_i.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_j.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_k.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_l.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_m.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_n.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_o.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_p.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_r.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_s.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_t.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_type.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_v.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\globals_w.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__buttons.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__context.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__errors.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__init.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__input.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__joysticks.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__keys.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__mods.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__monitor.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__native.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__shapes.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__vulkan.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\group__window.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\index.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\input_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\input_guide.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\intro_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\intro_guide.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\main_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\modules.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\monitor_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\monitor_guide.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\moving_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\moving_guide.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\news.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\news_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\pages.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\quick_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\quick_guide.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_0.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_1.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_2.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_3.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_4.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_5.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_6.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_7.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_8.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_9.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_a.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_b.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_c.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_d.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_e.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\all_f.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\classes_0.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\defines_0.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\files_0.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\files_1.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\files_2.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\files_3.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\files_4.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\files_5.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\files_6.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\files_7.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\files_8.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\functions_0.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\groups_0.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\groups_1.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\groups_2.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\groups_3.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\groups_4.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\groups_5.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\groups_6.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\groups_7.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\groups_8.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\groups_9.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\nomatches.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\pages_0.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\pages_1.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\pages_2.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\pages_3.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\pages_4.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\pages_5.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\pages_6.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\pages_7.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\pages_8.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\typedefs_0.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\variables_0.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\variables_1.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\variables_2.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\variables_3.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\variables_4.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\variables_5.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\search\variables_6.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\structGLFWgammaramp.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\structGLFWimage.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\structGLFWvidmode.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\vulkan_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\vulkan_guide.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\window_8dox.html" />
+    <None Include="ExternalRepos\GLFW\docs\html\window_guide.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExternalRepos\GLEW\include\GL\glew.h" />
+    <ClInclude Include="ExternalRepos\GLEW\include\GL\glxew.h" />
+    <ClInclude Include="ExternalRepos\GLEW\include\GL\wglew.h" />
+    <ClInclude Include="ExternalRepos\GLFW\include\GLFW\glfw3.h" />
+    <ClInclude Include="ExternalRepos\GLFW\include\GLFW\glfw3native.h" />
+    <ClInclude Include="Graphics\Window.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
