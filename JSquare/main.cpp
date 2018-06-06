@@ -1,6 +1,6 @@
 #include<iostream>
 #include"Graphics/Window.h"
-#include<glfw3.h>
+//#include<glfw3.h>
 
 
 int main()
@@ -8,7 +8,6 @@ int main()
 	using namespace JSquare;
 	using namespace Graphics;
 
-	glfwInit();
 	Window window("Jazper",800, 600);
 
 	glClearColor(0.2f, 0.3f, 0.8f, 1.0f);

@@ -22,13 +22,11 @@ namespace JSquare {
 		{
 			std::cout << "Update is called!" << std::endl;
 			glfwPollEvents();
-			glfwGetFramebufferSize(m_Window, &m_Width, &m_Height);
 			glfwSwapBuffers(m_Window);
 		}
 
 		bool Window::init()
 		{
-			glfwInit();
 			if (!glfwInit)
 			{
 				std::cout << "Failed to Initialize!" << std::endl;
