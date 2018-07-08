@@ -70,12 +70,14 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)JSquare\ExternalRepos\GLEW\include\GL;$(SolutionDir)JSquare\ExternalRepos\GLFW\include\GLFW;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)JSquare\ExternalRepos\GLEW\lib;$(SolutionDir)JSquare\ExternalRepos\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)JSquare\ExternalRepos\SDL2\SDL2-2.0.8\include;$(SolutionDir)JSquare\ExternalRepos\GLEW\include\GL;$(SolutionDir)JSquare\ExternalRepos\GLFW\include\GLFW;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)JSquare\ExternalRepos\SDL2\SDL2-2.0.8\lib\x86;$(SolutionDir)JSquare\ExternalRepos\GLEW\lib;$(SolutionDir)JSquare\ExternalRepos\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Configuration)\Intermediates\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(SolutionDir)JSquare\ExternalRepos\GLEW\include\GL;$(SolutionDir)JSquare\ExternalRepos\GLFW\include\GLFW;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)JSquare\ExternalRepos\GLEW\lib;$(SolutionDir)JSquare\ExternalRepos\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)JSquare\ExternalRepos\SDL2\SDL2-2.0.8\include;$(SolutionDir)JSquare\ExternalRepos\GLEW\include\GL;$(SolutionDir)JSquare\ExternalRepos\GLFW\include\GLFW;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)JSquare\ExternalRepos\SDL2\SDL2-2.0.8\lib\x86;$(SolutionDir)JSquare\ExternalRepos\GLEW\lib;$(SolutionDir)JSquare\ExternalRepos\GLFW\lib-vc2015;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -83,9 +85,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>glew32s.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32s.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -104,11 +108,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>glew32s.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32s.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -126,8 +132,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CodeFile\GLSLProgram.cpp" />
+    <ClCompile Include="CodeFile\ErrorC.cpp" />
+    <ClCompile Include="Graphics\Sprite.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Graphics\Window.cpp" />
+    <ClCompile Include="MainGame\MainGame.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ExternalRepos\GLFW\docs\html\annotated.html" />
@@ -286,14 +295,19 @@
     <None Include="ExternalRepos\GLFW\docs\html\vulkan_guide.html" />
     <None Include="ExternalRepos\GLFW\docs\html\window_8dox.html" />
     <None Include="ExternalRepos\GLFW\docs\html\window_guide.html" />
+    <None Include="Shaders(vert and frag)\Basic.frag" />
+    <None Include="Shaders(vert and frag)\Basic.vert" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CodeFile\GLSLProgram.h" />
+    <ClInclude Include="CodeFile\ErrorC.h" />
     <ClInclude Include="ExternalRepos\GLEW\include\GL\glew.h" />
     <ClInclude Include="ExternalRepos\GLEW\include\GL\glxew.h" />
     <ClInclude Include="ExternalRepos\GLEW\include\GL\wglew.h" />
     <ClInclude Include="ExternalRepos\GLFW\include\GLFW\glfw3.h" />
     <ClInclude Include="ExternalRepos\GLFW\include\GLFW\glfw3native.h" />
-    <ClInclude Include="Graphics\Window.h" />
+    <ClInclude Include="Graphics\Sprite.h" />
+    <ClInclude Include="MainGame\MainGame.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,10 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MainGame\MainGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics\Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeFile\GLSLProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Graphics\Window.cpp">
+    <ClCompile Include="CodeFile\ErrorC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -179,15 +188,14 @@
     <None Include="ExternalRepos\GLFW\docs\html\vulkan_guide.html" />
     <None Include="ExternalRepos\GLFW\docs\html\window_8dox.html" />
     <None Include="ExternalRepos\GLFW\docs\html\window_guide.html" />
+    <None Include="Shaders(vert and frag)\Basic.vert" />
+    <None Include="Shaders(vert and frag)\Basic.frag" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ExternalRepos\GLFW\include\GLFW\glfw3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ExternalRepos\GLFW\include\GLFW\glfw3native.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Graphics\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ExternalRepos\GLEW\include\GL\glew.h">
@@ -197,6 +205,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ExternalRepos\GLEW\include\GL\wglew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame\MainGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics\Sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFile\GLSLProgram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeFile\ErrorC.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
