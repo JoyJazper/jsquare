@@ -1,8 +1,6 @@
 #pragma once
-class ErrorC
-{
-public:
-	ErrorC();
-	~ErrorC();
-};
+
+#include<string>
+
+extern void FatalError(std::string errorString);
 
